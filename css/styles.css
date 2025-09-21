@@ -1,0 +1,185 @@
+/* Sticky Footer: estructura básica */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+body > main, body > .contenido-central, body > .contenido {
+  flex: 1;
+}
+
+/* Encabezado */
+header {
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+/* Footer fijo al final */
+footer {
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: auto;
+}
+
+/* Sección principal tipo flex */
+.contenido {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2em;
+  gap: 1em;
+}
+
+.bloque {
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 12px;
+  width: 220px;
+  height: 180px;
+  background-color: #eafaf1;
+  border: 2px solid #2ecc71;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al pasar el mouse */
+.bloque:hover {
+  background-color: #d4f7e2;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Botones */
+button {
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  cursor: pointer;
+  border: 2px solid #067c36;
+  background-color: rgb(20, 135, 7);
+  color: #eaebed;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Grid */
+.seccion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+.grid-item {
+  background-color: #82e396;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contenido {
+    flex-direction: column;
+  }
+
+  .seccion-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Página Intermedia */
+.contenido-central {
+  text-align: center;
+  padding: 2em;
+}
+
+.contenido-central img {
+  margin-top: 1em;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 2px solid #007BFF;
+}
+
+/* Botón atrás */
+.boton-atras {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.boton-atras button {
+  padding: 0.6em 1.2em;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.boton-atras button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo de botones horizontales */
+.botones-container {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 3em 0;
+}
+
+.boton-estilo {
+  background-color: #3498db;
+  color: white;
+  padding: 1em 2em;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.boton-estilo:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+/* Botones normales */
+button {
+  padding: 0.6em 1.4em;
+  margin-top: 0.5em;
+  cursor: pointer;
+  border: none;
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al pasar el cursor */
+button:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
